@@ -6,7 +6,7 @@ before_install:
   - docker build -t a455892368/docker-react -f Dockerfile.dev .
 
 script:
-  - travis_wait docker run a455892368/docker-react npm run test -- --coverage
+  - docker run a455892368/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
